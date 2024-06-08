@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edmontonia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="logo-jurasica-500.png" alt="Dinosaur Icon">
+    <h1>Edmontonia</h1>
+</header>
+<nav>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+</nav>
+<main>
+    <div class="image-container">
+        <img src="1.png" alt="Edmontonia 1 Icon" >
+        <img src="2.jpg" alt="Edmontonia 2 Icon" >
+        <img src="3.jpg" alt="Edmontonia 3 Icon" >
+        <img src="4.jpg" alt="Edmontonia 4 Icon" >
+    </div>
+    <h2>Română</h2>
+    <button class="button" id="play-romana">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="#036307"></path>
+        </svg>
+    </button>
+    <p id="romana-text">Edmontonia, numită de Charles Mortram Sternberg în 1928, este un gen de dinozaur blindat găsit în America de Nord, în special în Canada și SUA. Acest dinozaur nodosaurid a trăit din stadiile Campanian până la Maastrichtian din perioada Cretacicului târziu.  Clasificată în Chordata, Reptilia, Dinosauria, Ornithischia, Thyreophoroidea și Nodosauridae, Edmontonia include trei specii: E. longiceps (specia tip), E. rugosidens și E. schlessmani. Edmontonia era o erbivoră și măsura aproximativ 6,6 metri lungime.  Fosilele au fost comparate cu cele ale lui Denversaurus schlessmani și Palaeoscincus rugosidens. Au fost descoperite mai multe exemplare din Edmontonia, oferind perspective valoroase asupra structurii și stilului său de viață. Acest dinozaur este cunoscut pentru armura sa grea și corpul cu vârfuri, care servea drept protecție împotriva prădătorilor. </p><br>
+    <h2>English</h2>
+    <button class="button" id="play-engleza">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="#036307"></path>
+        </svg>
+    </button>
+    <p id="engleza-text"> Edmontonia, named by Charles Mortram Sternberg in 1928, is a genus of armored dinosaur found in North America, specifically in Canada and the USA. This nodosaurid dinosaur lived from the Campanian to the Maastrichtian stages of the Late Cretaceous period.
+
+        Classified under Chordata, Reptilia, Dinosauria, Ornithischia, Thyreophoroidea, and Nodosauridae, Edmontonia includes three species: E. longiceps (the type species), E. rugosidens, and E. schlessmani. Edmontonia was an herbivore and measured approximately 6.6 meters in length.
+
+        Fossils have been compared to those of Denversaurus schlessmani and Palaeoscincus rugosidens. Multiple specimens of Edmontonia have been discovered, providing valuable insights into its structure and lifestyle. This dinosaur is known for its heavy armor and spiked body, which served as protection against predators.</p><br><br>
+</main>
+<footer>
+    <script>
+        const romanaAudio = new Audio('Edmontonia_romana_voice.mp3');
+        const englezaAudio = new Audio('Edmontonia_engleza_voice.mp3');
+
+        const playRomana = document.getElementById('play-romana');
+        const romanaText = document.getElementById('romana-text');
+        const playEngleza = document.getElementById('play-engleza');
+        const englezaText = document.getElementById('engleza-text');
+
+        playRomana.addEventListener('click', () => {
+            if (romanaAudio.paused) {
+                romanaAudio.play();
+                playRomana.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg>';
+            } else {
+                romanaAudio.pause();
+                playRomana.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg> Pause';
+            }
+        });
+
+        playEngleza.addEventListener('click', () => {
+            if (englezaAudio.paused) {
+                englezaAudio.play();
+                playEngleza.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg>';
+            } else {
+                englezaAudio.pause();
+                playEngleza.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg> Pause';
+            }
+        });
+    </script>
+    &copy; 2024 Jurasica Adventure Park. All rights reserved.
+</footer>
+
+</body>
+</html>
